@@ -18,10 +18,73 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>webmyne.JasVisaApp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>webmyne.JasVisaApp</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb500577713400496</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>webmyne.JasVisaApp</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>577953899484-cdl9herr09q5qjukm7n9dcshg11dev1g.apps.googleusercontent.com</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>500577713400496</string>
+	<key>FacebookDisplayName</key>
+	<string>Jas Tours And Travels</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb-messenger-api20140430</string>
+		<string>webmyne.JasVisaApp</string>
+		<string>fbapi20130214</string>
+		<string>fbauth2</string>
+		<string>fbapi</string>
+		<string>fbauth</string>
+        <string>com.google.gppconsent</string>
+        <string>gplus</string>
+        <string>com.webmyne.KidsCrown</string>
+        <string>hasgplus4</string>
+        <string>googlechrome-x-callback</string>
+        <string>googlechrome</string>
+        <string>com.google.gppconsent.2.4.0</string>
+        <string>com.google.gppconsent.2.3.0</string>
+        <string>com.google.gppconsent.2.2.0</string>
+        <string>com.google.gppconsent.2.4.1</string>
+        <string>com-google-gidconsent</string>
+        <string>com-google-gidconsent-youtube</string>
+        <string>com-google-gidconsent-google</string>
+        <string>577953899484-cdl9herr09q5qjukm7n9dcshg11dev1g.apps.googleusercontent.com</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -30,6 +93,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleBlackTranslucent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -43,5 +108,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

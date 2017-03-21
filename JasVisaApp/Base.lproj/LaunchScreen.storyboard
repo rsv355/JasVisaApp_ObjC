@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +15,45 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jas_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0jm-Nb-L4q">
+                                <rect key="frame" x="115" y="134" width="145" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="AnG-VC-yMn"/>
+                                    <constraint firstAttribute="width" constant="145" id="BGa-If-LqD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login.png" translatesAutoresizingMaskIntoConstraints="NO" id="nxv-1a-rds">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0jm-Nb-L4q" firstAttribute="centerX" secondItem="nxv-1a-rds" secondAttribute="centerX" id="6LN-n8-T8D"/>
+                            <constraint firstItem="0jm-Nb-L4q" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="71" id="Az9-BJ-Nit"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="nxv-1a-rds" secondAttribute="bottom" id="BbH-pA-zKA"/>
+                            <constraint firstItem="0jm-Nb-L4q" firstAttribute="centerY" secondItem="nxv-1a-rds" secondAttribute="centerY" constant="-136" id="Cn4-Ml-Y2i"/>
+                            <constraint firstItem="nxv-1a-rds" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="a9B-OG-Z8e"/>
+                            <constraint firstItem="nxv-1a-rds" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="iwc-J6-gHh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nxv-1a-rds" secondAttribute="trailing" constant="-20" id="yl2-6e-rEt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Az9-BJ-Nit"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Login.png" width="640" height="1136"/>
+        <image name="jas_logo.png" width="173" height="119"/>
+    </resources>
 </document>

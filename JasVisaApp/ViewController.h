@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnMenu;
+@property (weak, nonatomic) IBOutlet UIView *viewHeader;
 
 
 @end

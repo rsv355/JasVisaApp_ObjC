@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <GooglePlus/GooglePlus.h>
+#import <GoogleOpenSource/GoogleOpenSource.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +22,41 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // [NSThread sleepForTimeInterval:2.0];
+   // [self setStatusBarBackgroundColor:[UIColor colorWithRed:(255/255.0) green:(75/255.0) blue:(26/255.0) alpha:1.0f]];
+
     return YES;
+}
+- (void)setStatusBarBackgroundColor:(UIColor *)color {
+    
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = color;
+    }
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    if ([url.scheme isEqualToString:@"fb500577713400496"])
+    {
+        //[SVProgressHUD showWithStatus:@"Logging in..."];
+        return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                              openURL:url
+                                                    sourceApplication:sourceApplication
+                                                           annotation:annotation];
+    }
+    else
+    {
+        //[SVProgressHUD showWithStatus:@"Logging in..."];
+        return [GPPURLHandler handleURL:url
+                      sourceApplication:sourceApplication
+                             annotation:annotation];
+        
+    }
+    
+    return YES;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
